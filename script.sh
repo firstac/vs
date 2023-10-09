@@ -1,6 +1,7 @@
 #!/bin/bash
+sudo su;
 sudo apt update -y && sudo apt upgrade -y;
-sudo apt install xfce4 tigervnc-standalone-server qterminal dbus-x11 -y;
+sudo apt install xfce4 tigervnc-standalone-server firefox-esr qterminal dbus-x11 -y;
 sudo wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz;
 sudo tar -xvf ngrok-v3-stable-linux-amd64.tgz;
 sudo rm ngrok-v3-stable-linux-amd64.tgz;

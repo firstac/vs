@@ -144,7 +144,8 @@
     echo "<br>";
     minh(20);
     echo "<br>";
-    function add_five(&$value) {
+    function add_five(&$value)
+    {
         $value += 5;
     }
     $num = 2;
@@ -152,15 +153,44 @@
     echo $num;
     echo "<br>";
 
-    $arr = array("first","second", "third", "fourth");
-    echo count($arr);echo "<br>";
+    $arr = array("first", "second", "third", "fourth");
+    echo count($arr);
+    echo "<br>";
     $arlen = count($arr);
-    for ($i=0; $i < $arlen; $i++) {
-        echo ($i+1).". ".$arr[$i];
+    for ($i = 0; $i < $arlen; $i++) {
+        echo ($i + 1) . ". " . $arr[$i];
         echo "<br>";
     }
+    echo $_SERVER['PHP_SELF'];
+    echo "<br>";
+    echo $_SERVER['SERVER_NAME'];
+    echo "<br>";
+    echo $_SERVER['HTTP_HOST'];
+    echo "<br>";
+    echo $_SERVER['HTTP_REFERER'];
+    echo "<br>";
+    echo $_SERVER['HTTPS_USER_AGENT'];
+    echo "<br>";
+    echo $_SERVER['SCRIPT_NAME'];
+    echo "<br>";
+    echo $_SERVER['GATEWAY_INTERFACE'];
+    echo "<br>";
+    if ($_SERVER['REQUEST_METHOD'] == "POST") {
+        $name = $_REQUEST['fname'];
+        if (empty($name)) {
+            echo "Name is empty";
+        } else {
+            echo "welcome to our new webpage ".$name;
+        }
+    }
+
 
     ?>
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        Name: <input type="text" name="fname">
+        <input type="submit">
+
+    </form>
 
 </body>
 

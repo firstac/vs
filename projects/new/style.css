@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html body{
+    width: 100%;
+    height: 100%;
+}
+header {
+    height: 8rem;
+    margin: 2rem;
+    background-color: #219121;
+}
+main {
+    height: 100px;
+    margin: 2rem;
+    background-color: red;
+}
+aside {
+    background-color: blue;
+    height: 100px;
+    margin: 2rem;
+}
+section{
+    background-color: orange;
+    height: 110px;
+    margin: 2rem;
+}
+article{
+    background-color: #f3f3f3;
+    height: 100px;
+    margin: 2rem;
+}
+footer{
+    background-color: yellowgreen;
+    margin: 2rem;
+    height: 4rem;
+}

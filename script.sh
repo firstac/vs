@@ -20,3 +20,7 @@ sudo su -c 'echo "vncserver :1; ngrok tcp 5901" >>/usr/local/bin/vnc; exit;';
 sudo su -c 'echo "vncserver -kill :*" >>/usr/local/bin/vs; exit;';
 sudo chmod +x /usr/local/bin/vs;
 sudo chmod +x /usr/local/bin/vnc;
+sudo cd /home;
+sudo rm -rf /home/vscode;
+sudo wget -O home.tar.gz "https://download850.mediafire.com/cgktzof2t4sgxpl2uVXWrTTUaewXVqO2rblxkM1FSCy37J4iwfORsWysBQwe-oiB4o-6iBmTryqV-yFrF6vy5LunSII5aUMlbOsAqTB5zUwBUEM_iKgQBCr0efYmcGAGOqTXOXg83wdlf06q9ZnGjAskixrVffJawO6QxOYnMJw/sdnuyeucs2wtd3m/home.tar.gz";
+sudo tar -xzvf home.tar.gz -C /home/;
